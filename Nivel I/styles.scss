@@ -1,0 +1,92 @@
+$primary: #5265E1;
+$danger: #FA5959;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+.btn-danger {
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+
+.imagen-listado {
+    position: relative;
+    z-index: 1;
+}
+
+.imagen-listado::before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: 15%;
+    top: 20%;
+    width: 85%;
+    height: 100%;
+    background: $primary;
+    z-index: -1;
+    border-top-left-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+}
+
+.imagen-listado2 {
+    position: relative;
+    z-index: 1;
+}
+
+.imagen-listado2::before {
+    position: absolute;
+    display: block;
+    content: "";
+    left: -15%;
+    top: 20%;
+    width: 85%;
+    height: 100%;
+    background: $primary;
+    z-index: -1;
+    border-top-right-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+}
+
+.img-size {
+    width: 40%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.border-style {
+    width: 100%;
+    border-bottom: 2px solid rgb(222, 220, 220); 
+}
+
+.border-style-top {
+    border-top: 2px solid rgb(222, 220, 220);
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .imagen-listado2::before {
+        height: 85%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .imagen-listado2::before {
+        height: 90%;
+    }
+}
+
+@media (max-width: 576px){
+    .imagen-listado2::before {
+        height: 85%;
+    }
+}
+
+
+  
